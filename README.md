@@ -11,13 +11,15 @@ Developed a multi-page, multi-language website (Uzbek, English, Russian) for an 
 🎯 Key Features
 
 ✅ Multi-Language Support – Users can easily switch between Uzbek, English, and Russian. <br>
-✅ Dynamic & Structured Layout – Organized sections for instructors, courses, and services. <br>
+✅ Efficient Data Management – Leveraged React Query for optimized data fetching & state. <br>
 ✅ Optimized SEO Performance – Improved from 57% to 76%, enhancing visibility and ranking. <br>
-✅ Efficient Data Management – Leveraged React Query for optimized data fetching & state.
+✅ Dynamic & Structured Layout – Organized sections for instructors, courses, and services. 
 
 🛠 Technical Highlights
 
-Implemented Redux Toolkit for scalable global state management. <br>
-Optimized performance by following best coding practices. <br>
-Ensured a responsive & user-friendly UI across all devices. <br>
-🚀 Technologies: React, TypeScript, Redux Toolkit, React Query, and other libraries.
+<ul>
+   <li>Optimized performance by following best coding practices.</li>
+   <li>Ensured a responsive & user-friendly UI across all devices.</li>
+   <li>Implemented Redux Toolkit for scalable global state management.</li>
+   <li>Technologies: React, TypeScript, Redux Toolkit, React Query, and other libraries.</li>
+</ul>
