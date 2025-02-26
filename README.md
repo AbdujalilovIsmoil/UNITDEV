@@ -17,7 +17,7 @@ Developed a multi-page, multi-language website (Uzbek, English, Russian) for an 
 
 🛠 Technical Highlights
 
-Implemented Redux Toolkit for scalable global state management.
-Optimized performance by following best coding practices.
-Ensured a responsive & user-friendly UI across all devices.
+Implemented Redux Toolkit for scalable global state management. <br>
+Optimized performance by following best coding practices. <br>
+Ensured a responsive & user-friendly UI across all devices. <br>
 🚀 Technologies: React, TypeScript, Redux Toolkit, React Query, and other libraries.
