@@ -1,0 +1,15 @@
+@font-face {
+  @include gilroy;
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+  src: url("../../fonts/gilroy/Gilroy-Light.otf") format("otf");
+}
+
+@font-face {
+  @include gilroy;
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+  src: url("../../fonts/gilroy/Gilroy-ExtraBold.otf") format("otf");
+}

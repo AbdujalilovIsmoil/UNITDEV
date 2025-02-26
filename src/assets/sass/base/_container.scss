@@ -1,0 +1,18 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 65px;
+  max-width: 1440px;
+
+  @include xl {
+    padding: 0 50px;
+  }
+
+  @include md {
+    padding: 0 30px;
+  }
+
+  @include sm {
+    padding: 0 20px;
+  }
+}

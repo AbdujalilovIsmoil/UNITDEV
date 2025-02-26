@@ -1,0 +1,112 @@
+.services {
+  padding-bottom: 100px;
+  &__content {
+    margin: {
+      top: 0px;
+      left: auto;
+      right: auto;
+      bottom: 80px;
+    }
+    max-width: 653px;
+    text-align: center;
+
+    @include sm {
+      margin-top: 80px;
+    }
+    &-title {
+      @include poppins;
+      margin-bottom: 10px;
+      letter-spacing: 0.12px;
+      @include headingFonts($condition__title-color, 36px, 600, 54px, none);
+      span {
+        color: $site-orange-color;
+      }
+
+      @include md {
+        font-size: 30px;
+        line-height: 50px;
+      }
+
+      @include sm {
+        font-size: 28px;
+        line-height: 40px;
+      }
+    }
+
+    &-text {
+      opacity: 0.5;
+      @include poppins;
+      letter-spacing: 0.12px;
+      @include headingFonts($condition__title-color, 18px, 400, 35px, none);
+    }
+  }
+
+  &__square {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: $site-orange-color;
+
+    @include sm {
+      margin: 0 auto 20px auto;
+    }
+
+    &-icon {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &__list {
+    gap: 35px;
+    display: grid;
+    align-items: flex-start;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, auto);
+
+    @include defaultMediaQuery(1200px) {
+      grid-template-columns: repeat(2, auto);
+    }
+
+    @include sm {
+      grid-template-columns: auto;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    max-width: 360px;
+
+    @include defaultMediaQuery(1200px) {
+      max-width: 100%;
+    }
+
+    @include sm {
+      text-align: center;
+    }
+
+    &-title {
+      @include poppins;
+      margin-bottom: 20px;
+      letter-spacing: 0.12px;
+      @include headingFonts($condition__title-color, 24px, 600, 35px, none);
+      line-height: 35px;
+
+      @include sm {
+        font-size: 22px;
+      }
+    }
+
+    &-text {
+      opacity: 0.5;
+      @include poppins;
+      letter-spacing: 0.12px;
+      @include headingFonts($condition__title-color, 14px, 400, 30px, none);
+      line-height: 30px;
+    }
+  }
+}

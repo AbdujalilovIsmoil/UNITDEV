@@ -1,0 +1,120 @@
+.our-result {
+  margin-bottom: 160px;
+  background-color: $our-result__bg-color;
+  padding: {
+    top: 100px;
+    bottom: 100px;
+  }
+
+  @include sm {
+    margin-bottom: 100px;
+    padding: {
+      top: 40px;
+      bottom: 40px;
+    }
+  }
+
+  &__container {
+    @include flexLayout(flex, flex-start, center, 15px, row nowrap);
+  }
+
+  &__content {
+    @include defaultMediaQuery(1180px) {
+      text-align: center;
+    }
+
+    &-title {
+      @include poppins;
+      margin-bottom: 20px;
+      letter-spacing: 0.12px;
+      @include headingFonts($nav__link-color, 36px, 600, 54px, none);
+
+      @include defaultMediaQuery(1350px) {
+        font-size: 28px;
+      }
+
+      @include sm {
+        font-size: 25px;
+      }
+
+      span {
+        color: $site-orange-color;
+      }
+    }
+
+    &-text {
+      opacity: 0.5;
+      @include poppins;
+      margin-bottom: 50px;
+      letter-spacing: 0.12px;
+      @include headingFonts($nav__link-color, 18px, 400, 45px, none);
+
+      @include defaultMediaQuery(1350px) {
+        font-size: 16px;
+      }
+
+      @include sm {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__indicators {
+    @include flexLayout(flex, flex-start, flex-start, 15px, row nowrap);
+
+    @include defaultMediaQuery(1180px) {
+      @include flexLayout(flex, center, center, 15px, row nowrap);
+    }
+
+    @include sm {
+      @include flexLayout(flex, center, center, 30px, column nowrap);
+    }
+  }
+
+  &__indicator {
+    @include sm {
+      text-align: center;
+    }
+
+    &-number {
+      @include poppins;
+      letter-spacing: 0.12px;
+      @include headingFonts($site-orange-color, 36px, 400, 35px, none);
+
+      @include defaultMediaQuery(1350px) {
+        font-size: 25px;
+      }
+
+      @include md {
+        font-size: 20px;
+      }
+    }
+
+    &-title {
+      @include poppins;
+      letter-spacing: 0.12px;
+      @include headingFonts($nav__link-color, 20px, 400, 35px, none);
+
+      @include defaultMediaQuery(1350px) {
+        font-size: 18px;
+      }
+
+      @include md {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &-image {
+    width: 635px;
+    object-fit: cover;
+
+    @include defaultMediaQuery(1350px) {
+      width: 550px;
+    }
+
+    @include defaultMediaQuery(1180px) {
+      display: none;
+    }
+  }
+}

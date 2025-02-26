@@ -1,0 +1,153 @@
+.course {
+  &__container {
+    padding-top: 50px;
+    padding-bottom: 95px;
+  }
+
+  &-title {
+    @include poppins();
+    margin-bottom: 20px;
+    @include headingFonts($nav__link-color, 40px, 600, 60px, none);
+
+    @include sm {
+      font-size: 30px;
+    }
+  }
+
+  &-boxes {
+    gap: 20px;
+    display: grid;
+    height: 648px;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include defaultMediaQuery(650px) {
+      height: 500px;
+    }
+
+    @include sm {
+      height: 400px;
+    }
+  }
+  &-box {
+    display: grid;
+    position: relative;
+    border-radius: 20px;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left left;
+
+    &::after {
+      bottom: 0;
+      border-radius: 20px;
+      background: linear-gradient(
+        180deg,
+        rgba(21, 26, 32, 0) 0%,
+        rgba(21, 26, 32, 0.99) 100%
+      );
+      height: 75%;
+      width: 100%;
+      content: "";
+      position: absolute;
+    }
+
+    &__padding {
+      padding: 20px;
+      @include sm {
+        padding: 10px;
+      }
+    }
+
+    &__content {
+      z-index: 1;
+
+      &-format {
+        @include bebas;
+        padding: 10px 20px;
+        letter-spacing: -1px;
+        border-radius: 0px 10px 10px 0px;
+        @include headingFonts($nav__link-color, 24px, 400, 24px, uppercase);
+        background: linear-gradient(270deg, #ff6767 0%, #ffc30d 100%),
+          linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+
+        @include defaultMediaQuery(650px) {
+          font-size: 18px;
+        }
+
+        @include sm {
+          font-size: 14px;
+          display: inline-block;
+        }
+      }
+
+      &-title {
+        margin-bottom: 5px;
+        @include montserrant;
+        @include headingFonts($nav__link-color, 45px, 700, 54.86px, uppercase);
+        @include defaultMediaQuery(650px) {
+          font-size: 35px;
+        }
+
+        @include sm {
+          font-size: 28px;
+        }
+      }
+
+      &-regular-title {
+        margin-bottom: 16px;
+        @include montserrant;
+        @include headingFonts($nav__link-color, 25px, 400, 30.48px, uppercase);
+        @include defaultMediaQuery(650px) {
+          font-size: 20px;
+        }
+
+        @include sm {
+          font-size: 18px;
+        }
+      }
+
+      &-text {
+        @include poppins;
+        @include headingFonts($nav__link-color, 14px, 400, 21px, none);
+        @include defaultMediaQuery(650px) {
+          font-size: 12px;
+        }
+      }
+    }
+
+    &__footer {
+      @include flexLayout(flex, space-between, flex-end, none, row nowrap);
+      width: 100%;
+      &-logo {
+        height: 36px;
+        width: 135px;
+        object-fit: cover;
+
+        @include sm {
+          height: 100%;
+          width: 100px;
+        }
+      }
+
+      &-information {
+        @include bebas;
+        padding: 16px 32px;
+        letter-spacing: -1px;
+        border-radius: 10px 0px 10px 0px;
+        @include headingFonts($nav__link-color, 36px, 400, 36px, uppercase);
+        background: linear-gradient(270deg, #ffe601 0%, #f48c06 100%),
+          linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+        @include defaultMediaQuery(650px) {
+          font-size: 25px;
+        }
+
+        @include sm {
+          font-size: 18px;
+          padding: 12px 28px;
+        }
+      }
+    }
+  }
+}

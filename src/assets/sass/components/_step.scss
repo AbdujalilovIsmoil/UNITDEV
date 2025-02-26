@@ -1,0 +1,140 @@
+$b: 40px;
+$blur: blur(9px);
+
+.step {
+  padding: 135px 0px 60px 0px;
+
+  @include md {
+    padding: 70px 0px 60px 0px;
+  }
+
+  &__container {
+    @include flexLayout(flex, flex-start, center, 50px, row nowrap);
+    @include defaultMediaQuery(1180px) {
+      gap: 25px;
+    }
+
+    @include defaultMediaQuery(900px) {
+      flex-direction: column;
+    }
+  }
+  &-image {
+    width: 525px;
+    height: 530px;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-clip: padding-box;
+    border: $b solid rgba($input__border-color, 0.2);
+
+    @include defaultMediaQuery(1300px) {
+      height: 500px;
+      width: 500px;
+    }
+
+    @include defaultMediaQuery(1180px) {
+      height: 400px;
+    }
+
+    @include defaultMediaQuery(1000px) {
+      height: 350px;
+    }
+
+    @include defaultMediaQuery(900px) {
+      width: 100%;
+    }
+
+    &:before {
+      z-index: -1;
+      content: "";
+      left: -$b - 5px;
+      border: inherit;
+      top: -$b - 2.5px;
+      right: -$b - 5px;
+      filter: blur(4px);
+      bottom: -$b - 5px;
+      position: absolute;
+      background: inherit;
+      border-color: transparent;
+      background-clip: border-box;
+
+      @include defaultMediaQuery(1300px) {
+        top: -$b;
+        left: -$b;
+        right: -$b;
+        bottom: -$b;
+      }
+    }
+  }
+
+  &__content {
+    max-width: 637px;
+    @include defaultMediaQuery(1300px) {
+      max-width: 500px;
+    }
+    @include defaultMediaQuery(1000px) {
+      max-width: 450px;
+    }
+
+    @include defaultMediaQuery(900px) {
+      max-width: 100%;
+      text-align: center;
+    }
+
+    &-top-title {
+      @include poppins;
+      margin-bottom: 20px;
+      @include headingFonts($bg-dark, 24px, 400, 36px, none);
+      @include defaultMediaQuery(1300px) {
+        font-size: 18px;
+      }
+      @include defaultMediaQuery(1000px) {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+    }
+    &-center-title {
+      @include poppins;
+      margin-bottom: 20px;
+      @include headingFonts($bg-dark, 48px, 600, 72px, none);
+      @include defaultMediaQuery(1300px) {
+        font-size: 38px;
+      }
+
+      @include defaultMediaQuery(1000px) {
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+
+      span {
+        color: $site-orange-color;
+      }
+    }
+  }
+
+  &-texts {
+    &__item {
+      &:nth-child(1) {
+        margin-bottom: 20px;
+
+        @include defaultMediaQuery(1000px) {
+          margin-bottom: 10px;
+        }
+      }
+      &-text {
+        opacity: 0.5;
+        @include poppins;
+        @include headingFonts($bg-dark, 18px, 400, 27px, none);
+
+        @include defaultMediaQuery(1300px) {
+          font-size: 14px;
+        }
+
+        @include defaultMediaQuery(1000px) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

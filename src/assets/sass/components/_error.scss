@@ -1,0 +1,92 @@
+.error {
+  &__background {
+    width: 100%;
+    min-height: 458px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    @include flexLayout(flex, center, center, none, row nowrap);
+
+    @include md {
+      min-height: 350px;
+      padding-top: 50px;
+    }
+  }
+
+  &-title {
+    text-align: center;
+    @include montserrant;
+    @include headingFonts($nav__link-color, 40px, 700, 45.8px, none);
+
+    @include md {
+      font-size: 28px;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 626px;
+    text-align: center;
+    padding: {
+      top: 60px;
+      bottom: 120px;
+    }
+
+    @include md {
+      padding: {
+        top: 60px;
+        bottom: 90px;
+      }
+    }
+
+    &-status-code {
+      @include poppins;
+      @include headingFonts($site-orange-color, 200px, 800, none, none);
+      line-height: 220px;
+
+      @include md {
+        font-size: 100px;
+        line-height: 100px;
+      }
+    }
+
+    &-title {
+      @include poppins;
+      margin-bottom: 20px;
+      @include headingFonts($error__title-color, 50px, 700, none, none);
+
+      @include md {
+        font-size: 30px;
+        margin-bottom: 15px;
+      }
+    }
+    &-text {
+      margin-bottom: 56px;
+      @include montserrant;
+      @include headingFonts($error__text-color, 18px, 400, none, none);
+      line-height: 21.6px;
+
+      @include md {
+        font-size: 16px;
+      }
+    }
+
+    &-btn {
+      padding: 26px 52px;
+      @include montserrant;
+      transition: opacity 300ms linear;
+      background-color: $site-orange-color;
+      @include headingFonts($error__title-color, 16px, 500, none, none);
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      @include md {
+        font-size: 14px;
+        padding: 20px 40px;
+      }
+    }
+  }
+}

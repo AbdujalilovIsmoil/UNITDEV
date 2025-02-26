@@ -1,0 +1,173 @@
+$field-padding: 20px;
+
+.form {
+  width: 100%;
+  padding-bottom: 100px;
+
+  &-course {
+    padding-top: 180px;
+
+    @include sm {
+      padding-top: 125px;
+      padding-bottom: 50px;
+    }
+  }
+
+  &__container {
+    @include flexLayout(flex, space-between, flex-start, 0px, row nowrap);
+  }
+  &__slider {
+    &-image {
+      min-height: 720px;
+    }
+  }
+  &__box {
+    &:nth-child(1) {
+      width: 630px;
+      padding: 45px 80px;
+
+      @include defaultMediaQuery(1350px) {
+        width: 100%;
+      }
+
+      @include md {
+        padding: 45px;
+      }
+
+      @include sm {
+        padding: 20px;
+      }
+    }
+    &:nth-child(2) {
+      max-width: 650px;
+
+      @include defaultMediaQuery(1350px) {
+        max-width: 500px;
+      }
+
+      @include defaultMediaQuery(1200px) {
+        display: none;
+      }
+    }
+
+    &-title {
+      @include poppins;
+      margin-bottom: 20px;
+      letter-spacing: 0.12px;
+      @include headingFonts($nav__link-color, 48px, 600, 72px, none);
+
+      span {
+        color: $site-orange-color;
+      }
+
+      @include defaultMediaQuery(1350px) {
+        font-size: 36px;
+        text-align: center;
+      }
+
+      @include sm {
+        font-size: 25px;
+      }
+    }
+  }
+
+  &-registration {
+    &__user {
+      margin-bottom: 20px;
+      &-label {
+        display: block;
+        @include poppins;
+        margin-bottom: 10px;
+        letter-spacing: 0.12px;
+        @include headingFonts($nav__link-color, 14px, 600, 21px, none);
+      }
+      &-text {
+        width: 100%;
+        border: none;
+        height: 100%;
+        resize: none;
+        outline: none;
+        height: 150px;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        letter-spacing: 0.12px;
+        background-color: transparent;
+        border: 1px solid rgba($nav__link-color, 0.5);
+        @include headingFonts($nav__link-color, 14px, 400, 21px, none);
+
+        @include sm {
+          padding: 10px;
+          color: $condition__title-color;
+          background-color: white;
+        }
+      }
+    }
+
+    &-send {
+      width: 100%;
+      border: none;
+      padding: 20px 0px;
+      border-radius: 10px;
+      letter-spacing: 0.12px;
+      transition: opacity 300ms linear;
+      background-color: $site-orange-color;
+      @include headingFonts($bg-dark, 18px, 600, 21.47px, none);
+      &:hover {
+        opacity: 0.8;
+      }
+
+      @include sm {
+        font-size: 16px;
+        padding: 15px 0px;
+      }
+    }
+    &__box {
+      position: relative;
+      padding: 20px 56px;
+      border-radius: 10px;
+      border: 1px solid rgba($nav__link-color, 0.5);
+
+      @include sm {
+        background-color: $nav__link-color;
+      }
+
+      &--border {
+        padding: 0px;
+        border: 1px solid transparent;
+      }
+
+      svg {
+        z-index: 1;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: calc($field-padding - 10px);
+        left: 15px;
+
+        @include sm {
+          path {
+            fill: $condition__title-color;
+          }
+        }
+      }
+      &-field {
+        top: 0;
+        left: 0;
+        width: 100%;
+        border: none;
+        height: 100%;
+        outline: none;
+        padding: 20px 56px;
+        position: absolute;
+        border-radius: 10px;
+        letter-spacing: 0.12px;
+        @include headingFonts($nav__link-color, 14px, 400, 21px, none);
+
+        @include sm {
+          color: $condition__title-color;
+        }
+      }
+    }
+  }
+}

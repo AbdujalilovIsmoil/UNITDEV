@@ -1,0 +1,123 @@
+.projects {
+  padding-bottom: 180px;
+  &__content {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 60px;
+
+    @include md {
+      margin-bottom: 30px;
+    }
+    &-title {
+      font-size: 48px;
+      font-weight: 600;
+      color: #0b0b0b;
+      @include poppins;
+      line-height: 72px;
+      margin-bottom: 10px;
+      letter-spacing: 0.12px;
+
+      @include md {
+        font-size: 35px;
+        line-height: 50px;
+      }
+
+      @include sm {
+        font-size: 28px;
+        line-height: 40px;
+      }
+    }
+
+    &-text {
+      font-size: 18px;
+      font-weight: 400;
+      @include poppins;
+      line-height: 45px;
+      letter-spacing: 0.12px;
+      color: $swiper-bullet-color;
+
+      @include md {
+        font-size: 16px;
+        line-height: 35px;
+      }
+
+      @include sm {
+        font-size: 12px;
+        line-height: 25px;
+      }
+    }
+  }
+
+  &__list {
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include defaultMediaQuery(1200px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include sm {
+      grid-template-columns: auto;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    height: 410px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @include md {
+      height: 350px;
+    }
+
+    &-image {
+      position: absolute;
+    }
+  }
+
+  &-footer {
+    z-index: 1;
+    margin: 20px;
+    padding: 15px;
+    position: relative;
+    background-color: #0b0b0b;
+    &__list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    @include sm {
+      margin: 10px;
+      padding: 10px;
+    }
+
+    &__item {
+      &-key {
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 15px;
+        color: #ffffff80;
+        font-style: italic;
+        letter-spacing: 0.12px;
+      }
+      &-value {
+        font-size: 18px;
+        font-weight: 600;
+        color: #ffffff;
+        @include poppins;
+        line-height: 27px;
+        letter-spacing: 0.12px;
+        @include sm {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}

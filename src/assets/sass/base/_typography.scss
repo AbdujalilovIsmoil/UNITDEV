@@ -1,0 +1,27 @@
+*:focus {
+  outline-width: 3px;
+  outline-offset: 3px;
+  outline-style: dotted;
+  outline-color: #1f2633;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+.bg-dark {
+  background-color: $bg-dark;
+}
+
+a {
+  text-decoration: none;
+}

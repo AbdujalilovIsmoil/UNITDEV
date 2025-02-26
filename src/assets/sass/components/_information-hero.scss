@@ -1,0 +1,110 @@
+.information-hero {
+  width: 100%;
+  min-height: 650px;
+  padding-top: 255px;
+  padding-bottom: 65px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top top;
+
+  @include sm {
+    padding: 140px 0px 50px 0px;
+    min-height: 450px;
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 522px;
+    margin-bottom: 90px;
+
+    &-regular-heading {
+      margin-bottom: 16px;
+      @include montserrant;
+      @include headingFonts($nav__link-color, 25px, 400, 30.48px, uppercase);
+      @include defaultMediaQuery(650px) {
+        font-size: 20px;
+      }
+
+      @include sm {
+        font-size: 18px;
+      }
+    }
+
+    @include md {
+      margin-bottom: 75px;
+    }
+
+    @include sm {
+      margin-bottom: 50px;
+    }
+    &-heading {
+      @include poppins;
+      margin-bottom: 15px;
+      @include headingFonts($site-orange-color, 64px, 700, 65px, uppercase);
+
+      @include md {
+        font-size: 50px;
+      }
+
+      @include sm {
+        font-size: 40px;
+      }
+    }
+    &-text {
+      @include poppins;
+      @include headingFonts($nav__link-color, 16px, 500, 24px, none);
+
+      @include md {
+        font-size: 14px;
+      }
+
+      @include sm {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__list {
+    margin-bottom: 35px;
+    @include flexLayout(flex, flex-start, center, 12px, row nowrap);
+  }
+
+  &__item {
+    @include flexLayout(flex, flex-start, center, 10px, row nowrap);
+    &-key {
+      @include poppins;
+      display: inline-block;
+      @include headingFonts($nav__link-color, 24px, 400, 32.74px, none);
+
+      @include md {
+        font-size: 18px;
+      }
+    }
+    &-value {
+      @include poppins;
+      display: inline-block;
+      @include headingFonts($site-orange-color, 24px, 400, 32.74px, none);
+      @include md {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &-link {
+    @include poppins;
+    padding: 14px 28px;
+    border-radius: 13px;
+    @include headingFonts($nav__link-color, 18px, 600, 27px, none);
+    background-image: linear-gradient(270deg, #f48c06 0%, #ffc30d 100%),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+
+    @include md {
+      font-size: 16px;
+    }
+
+    @include sm {
+      font-size: 14px;
+      padding: 12px 24px;
+    }
+  }
+}

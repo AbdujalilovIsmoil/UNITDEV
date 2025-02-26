@@ -1,0 +1,7 @@
+.phone-input {
+  border: 1px solid rgba($nav__link-color, 0.5) !important;
+
+  @include sm {
+    color: $condition__title-color !important;
+  }
+}
